@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Employee Details </title>
+    <link rel="stylesheet" href="{% static 'employee.css' %}">
+
+</head>
+<body>
+    <h3> Employee Details </h3>
+    {% if employee %}
+    <img src="{{ employee.e_image.url }}" width="150">
+    <table border="2">
+        <tr>
+            <th> Name </th> 
+            <th> Number </th>
+            <th> Email </th>
+            <th> Salary </th>
+            <th> Company </th>
+        </tr>
+    
+        <tr>
+            <td>{{ employee.e_name }}</td>
+            <td> {{ employee.e_number }}</td>
+            <td> {{ employee.e_email }}</td>
+            <td> {{ employee.e_salary }}</td>
+            <td> {{ employee.e_company }}</td>
+        </tr>
+    
+    </table>
+    {% endif %}
+
+</body>
+</html>
+
+

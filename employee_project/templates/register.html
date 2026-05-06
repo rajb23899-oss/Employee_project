@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Register Page </title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+    <form method="post">
+    {% csrf_token %}
+    Name: <input type="text" name="name" placeholder="name"><br><br>
+    Email: <input type="email" name="email" placeholder="Enter your email"><br><br>
+    Password: <input type="password" name="password" placeholder="Enter Your password"><br><br>
+    Confirm Password: <input type="password" name="number" placeholder="Enter correct password"><br><br>
+    </form>
+    <a href="{% url 'add_employee' %}"> Submit </a>
+</body>
+</html>

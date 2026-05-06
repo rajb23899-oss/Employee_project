@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Add Employee </title>
+    <link rel="stylesheet" href="{% static 'add.css' %}">
+</head>
+<body>
+    <h2> Add Employee </h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        Name: <input type="text" name="e_name" placeholder="Employee Name"><br><br>
+        Number: <input type="number" name="e_number" placeholder="Employee number"><br><br>
+        Email: <input type="email" name="e_email" placeholder="Employee Email"><br><br>
+        Salary: <input type="number" name="e_salary" placeholder="Employee Salary" step="0.01"><br><br>
+        Company: <input type="text" name="e_company" placeholder="Employee company"><br><br>
+        Image: <input type="file" name="e_image"><br><br>
+        <button type="submit"> Add </button>
+        
+    </form>
+</body>
+</html>
